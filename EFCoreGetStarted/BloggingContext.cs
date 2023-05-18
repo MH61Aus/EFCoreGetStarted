@@ -31,6 +31,7 @@ public class BloggingContext : DbContext
         => options.UseSqlServer($"Server=.;Database=BloggingDB;Integrated Security=True;Encrypt=False;");
 }
 
+//Mark Blog as abstract, as we only want to create the derived types
 public abstract class Blog
 {
     public int BlogId { get; set; }
